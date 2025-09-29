@@ -68,7 +68,7 @@ export default function HomePage() {
               <a href="/contact">
                 <Button
                   variant="ghost"
-                  className="text-white hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 px-3 py-2 text-sm"
+                  className="text-white hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 px-3 py-2 text-base"
                 >
                   Contact
                 </Button>
