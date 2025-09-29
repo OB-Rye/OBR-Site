@@ -135,7 +135,7 @@ export default function HomePage() {
           Your browser does not support the video tag.
         </video>
 
-        <div className="absolute inset-0 bg-black/10 z-10"></div>
+        <div className="absolute inset-0 bg-black/25 z-10"></div>
 
         <div className="absolute inset-0 z-30 flex items-end justify-center pt-8 sm:pt-0 pb-8 sm:pb-32">
           {/* CHANGE: Reduced horizontal padding for mobile */}
