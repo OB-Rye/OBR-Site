@@ -21,7 +21,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 left-0 right-0 z-[999999] bg-black/70 backdrop-blur-xl border-b border-white/20 will-change-auto shadow-2xl">
+      <nav className="fixed top-0 left-0 right-0 z-[999999] bg-gradient-to-b from-black/80 via-black/55 to-transparent backdrop-blur-xl border-0 shadow-none ring-0 outline-none will-change-auto">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 sm:gap-4">
@@ -33,12 +33,11 @@ export default function HomePage() {
               <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white px-6 text-xl mr-4">
                 About Us
               </Button>
-              {/* CHANGE: Adjusted Contact button positioning to be more centered between About Us and social buttons */}
-              {/* CHANGE: Added hover effects to Contact button */}
+              {/* CHANGE: Adjusted Contact button spacing from mr-6 to mr-8 to center it between About Us and social buttons */}
               <a href="/contact">
                 <Button
                   variant="ghost"
-                  className="text-white hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 px-6 text-xl mr-6"
+                  className="text-white hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 px-6 text-xl mr-8"
                 >
                   Contact
                 </Button>
@@ -98,7 +97,8 @@ export default function HomePage() {
           </div>
 
           {mobileMenuOpen && (
-            <div className="lg:hidden mt-4 py-4 border-t border-white/20">
+            <div className="lg:hidden mt-4 py-4">
+              {/* removed border-t border-white/20 from mobile menu */}
               <div className="flex flex-col space-y-3">
                 <Button
                   variant="ghost"
@@ -123,8 +123,9 @@ export default function HomePage() {
       </nav>
 
       {/* Hero Section */}
+      {/* CHANGE: Added -mt-px to overlap hero by 1px and eliminate seam with transparent nav */}
       {/* CHANGE: Reduced hero section height on mobile from min-h-screen to h-[60vh] sm:min-h-screen */}
-      <section className="relative overflow-hidden hero-section h-[60vh] sm:min-h-screen">
+      <section className="relative overflow-hidden hero-section h-[60vh] sm:min-h-screen border-0 border-t-0 shadow-none ring-0 outline-none -mt-px">
         {/* CHANGE: Added proper height and z-index to video */}
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
           <source
@@ -276,72 +277,90 @@ export default function HomePage() {
                 </h3>
               </div>
 
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-blue-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                      <img
-                        src="/professional-seminar-presentation-with-speaker-and.jpg"
-                        alt="Seminar illustration"
-                        className="w-12 h-12 object-contain"
-                      />
+              {/* CHANGE: Restructured "OBR's Three Proven Paths" section with single parent wrapper */}
+              <section
+                id="obr-paths"
+                className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-6 sm:p-8 md:p-10 space-y-6 md:space-y-8"
+              >
+                {/* CHANGE: Moved heading inside wrapper with normalized spacing */}
+                <h3 className="text-slate-900 mt-0 mb-0 text-center">
+                  <span className="block sm:inline text-[20px] sm:text-xl lg:text-2xl font-bold">
+                    OBR's Three Proven Paths:
+                  </span>
+                  <span className="block sm:inline text-lg sm:text-xl lg:text-2xl font-bold">
+                    {" "}
+                    Turn Culture into Your Competitive Edge
+                  </span>
+                </h3>
+
+                {/* CHANGE: Moved 3-card grid inside wrapper with responsive grid classes */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-blue-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                        <img
+                          src="/professional-seminar-presentation-with-speaker-and.jpg"
+                          alt="Seminar illustration"
+                          className="w-12 h-12 object-contain"
+                        />
+                      </div>
+                      <h4 className="text-[28px] sm:text-[24px] md:text-xl font-bold text-blue-700 mb-3">Seminars</h4>
+                      <p className="text-slate-700 text-base sm:text-sm leading-relaxed">
+                        High-energy, practical sessions that give leaders and teams the tools to navigate culture with
+                        confidence.
+                      </p>
                     </div>
-                    <h4 className="text-[28px] sm:text-[24px] md:text-xl font-bold text-blue-700 mb-3">Seminars</h4>
-                    <p className="text-slate-700 text-base sm:text-sm leading-relaxed">
-                      High-energy, practical sessions that give leaders and teams the tools to navigate culture with
-                      confidence.
-                    </p>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-purple-50 to-pink-100 border-2 border-purple-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                        <img
+                          src="/one-on-one-coaching-session-with-mentor-and-mentee.jpg"
+                          alt="Coaching illustration"
+                          className="w-12 h-12 object-contain"
+                        />
+                      </div>
+                      <h4 className="text-[28px] sm:text-[24px] md:text-xl font-bold text-purple-700 mb-3">Coaching</h4>
+                      <p className="text-slate-700 text-base sm:text-sm leading-relaxed">
+                        Tailored one-to-one or small-group guidance to sharpen your cultural intelligence and leadership
+                        edge.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="text-center">
+                      <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                        <img
+                          src="/business-consulting-meeting-with-charts-and-strate.jpg"
+                          alt="Consulting illustration"
+                          className="w-12 h-12 object-contain"
+                        />
+                      </div>
+                      <h4 className="text-[28px] sm:text-[24px] md:text-xl font-bold text-green-700 mb-3">
+                        Consulting
+                      </h4>
+                      <p className="text-slate-700 text-base sm:text-sm leading-relaxed">
+                        Deep partnership to solve cross-border challenges, align teams, and unlock global opportunities.
+                      </p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-pink-100 border-2 border-purple-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                {/* CHANGE: Moved purple tagline inside wrapper with normalized spacing */}
+                <div className="flex items-center justify-center gap-3 text-lg font-medium mt-0 mb-0">
                   <div className="text-center">
-                    <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                      <img
-                        src="/one-on-one-coaching-session-with-mentor-and-mentee.jpg"
-                        alt="Coaching illustration"
-                        className="w-12 h-12 object-contain"
-                      />
-                    </div>
-                    <h4 className="text-[28px] sm:text-[24px] md:text-xl font-bold text-purple-700 mb-3">Coaching</h4>
-                    <p className="text-slate-700 text-base sm:text-sm leading-relaxed">
-                      Tailored one-to-one or small-group guidance to sharpen your cultural intelligence and leadership
-                      edge.
+                    <p className="text-xl sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent tracking-tight leading-tight">
+                      <span className="block sm:inline">Whether you want inspiration,</span>
+                      <span className="block sm:inline"> transformation,</span>
+                      <span className="block sm:inline"> or hands-on solutions</span>
+                      <span className="block mt-2">—these offerings give you a direct path</span>
+                      <span className="block sm:inline"> to global success.</span>
                     </p>
                   </div>
                 </div>
-
-                <div className="bg-gradient-to-br from-green-50 to-emerald-100 border-2 border-green-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 overflow-hidden">
-                      <img
-                        src="/business-consulting-meeting-with-charts-and-strate.jpg"
-                        alt="Consulting illustration"
-                        className="w-12 h-12 object-contain"
-                      />
-                    </div>
-                    <h4 className="text-[28px] sm:text-[24px] md:text-xl font-bold text-green-700 mb-3">Consulting</h4>
-                    <p className="text-slate-700 text-base sm:text-sm leading-relaxed">
-                      Deep partnership to solve cross-border challenges, align teams, and unlock global opportunities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex items-center justify-center gap-3 text-lg font-medium">
-                <div className="text-center">
-                  {/* CHANGE: Increased mobile font size from text-lg to text-xl (18px to 20px) */}
-                  {/* CHANGE: Restructured text layout for better mobile readability with line breaks and visual hierarchy */}
-                  {/* CHANGE: Added line break after "direct path" on mobile so "to global success" appears on last line */}
-                  <p className="text-xl sm:text-xl lg:text-2xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent tracking-tight leading-tight">
-                    <span className="block sm:inline">Whether you want inspiration,</span>
-                    <span className="block sm:inline"> transformation,</span>
-                    <span className="block sm:inline"> or hands-on solutions</span>
-                    <span className="block mt-2">—these offerings give you a direct path</span>
-                    <span className="block sm:inline"> to global success.</span>
-                  </p>
-                </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>
