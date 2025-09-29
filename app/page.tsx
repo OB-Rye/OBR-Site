@@ -30,8 +30,8 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:flex items-center">
-              {/* CHANGE: Reduced right margin from mr-4 to mr-2 to move About Us closer to Contact */}
-              <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white px-6 text-xl mr-2">
+              {/* CHANGE: Completely removed right margin from About Us button to create equal spacing around Contact */}
+              <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white px-6 text-xl">
                 About Us
               </Button>
               {/* CHANGE: Removed right margin from Contact button to bring it directly next to social icons */}
