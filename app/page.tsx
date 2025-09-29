@@ -171,12 +171,15 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 {/* CHANGE: Reduced button size on mobile */}
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 hover:from-slate-900 hover:via-slate-800 hover:to-slate-700 text-white border-0 shadow-2xl text-base sm:text-lg px-6 py-3 sm:px-12 sm:py-6 rounded-full font-semibold tracking-wide transform hover:scale-105 transition-all duration-300"
-                >
-                  Book Free Strategy Call
-                </Button>
+                {/* CHANGE: Added mt-4 to move button slightly down and wrapped in link to /contact */}
+                <a href="/contact" className="mt-4">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-600 hover:from-slate-900 hover:via-slate-800 hover:to-slate-700 text-white border-0 shadow-2xl text-base sm:text-lg px-6 py-3 sm:px-12 sm:py-6 rounded-full font-semibold tracking-wide transform hover:scale-105 transition-all duration-300"
+                  >
+                    Book Free Strategy Call
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
