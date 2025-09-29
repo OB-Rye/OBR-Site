@@ -264,18 +264,7 @@ export default function HomePage() {
                 </span>
               </p>
 
-              <div className="bg-gradient-to-r from-slate-100/80 to-slate-200/80 rounded-2xl p-3 border border-slate-300 flex items-center justify-center min-h-[100px]">
-                {/* Split text and increased mobile font size for first part to 20px */}
-                <h3 className="text-slate-900 mb-3">
-                  <span className="block sm:inline text-[20px] sm:text-xl lg:text-2xl font-bold">
-                    OBR's Three Proven Paths:
-                  </span>
-                  <span className="block sm:inline text-lg sm:text-xl lg:text-2xl font-bold">
-                    {" "}
-                    Turn Culture into Your Competitive Edge
-                  </span>
-                </h3>
-              </div>
+              {/* CHANGE: Removed empty box that was under "Cultural intelligence builds trust and success" text */}
 
               {/* CHANGE: Restructured "OBR's Three Proven Paths" section with single parent wrapper */}
               <section
@@ -283,7 +272,8 @@ export default function HomePage() {
                 className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-6 sm:p-8 md:p-10 space-y-6 md:space-y-8"
               >
                 {/* CHANGE: Moved heading inside wrapper with normalized spacing */}
-                <h3 className="text-slate-900 mt-0 mb-0 text-center">
+                {/* CHANGE: Added mb-3 md:mb-4 to create subtle spacing between heading and cards */}
+                <h3 className="text-slate-900 mt-0 mb-3 md:mb-4 text-center">
                   <span className="block sm:inline text-[20px] sm:text-xl lg:text-2xl font-bold">
                     OBR's Three Proven Paths:
                   </span>
