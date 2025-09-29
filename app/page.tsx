@@ -267,10 +267,7 @@ export default function HomePage() {
               {/* CHANGE: Removed empty box that was under "Cultural intelligence builds trust and success" text */}
 
               {/* CHANGE: Restructured "OBR's Three Proven Paths" section with single parent wrapper */}
-              <section
-                id="obr-paths"
-                className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-3xl bg-white/5 backdrop-blur-sm ring-1 ring-white/10 p-6 sm:p-8 md:p-10 space-y-6 md:space-y-8"
-              >
+              <div className="relative w-full max-w-6xl mx-auto overflow-hidden rounded-3xl bg-white/10 backdrop-blur-md ring-2 ring-white/20 shadow-xl p-6 sm:p-8 md:p-10 space-y-6 md:space-y-8">
                 {/* CHANGE: Moved heading inside wrapper with normalized spacing */}
                 {/* CHANGE: Added mb-3 md:mb-4 to create subtle spacing between heading and cards */}
                 <h3 className="text-slate-900 mt-0 mb-3 md:mb-4 text-center">
@@ -350,7 +347,7 @@ export default function HomePage() {
                     </p>
                   </div>
                 </div>
-              </section>
+              </div>
             </div>
           </div>
         </div>
