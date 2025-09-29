@@ -1,0 +1,371 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated color tokens to match sophisticated design brief */
+  --background: oklch(1 0 0); /* #ffffff - clean white background */
+  --foreground: oklch(0.205 0 0); /* #374151 - professional dark gray text */
+  --card: oklch(0.97 0 0); /* #f1f5f9 - light gray for cards */
+  --card-foreground: oklch(0.205 0 0); /* #374151 - text inside cards */
+  --popover: oklch(1 0 0); /* #ffffff - white popover background */
+  --popover-foreground: oklch(0.205 0 0); /* #374151 - popover text */
+  --primary: oklch(0.646 0.222 285.8); /* #059669 - emerald primary for headings */
+  --primary-foreground: oklch(1 0 0); /* #ffffff - text on primary */
+  --secondary: oklch(0.696 0.17 162.48); /* #10b981 - emerald accent */
+  --secondary-foreground: oklch(1 0 0); /* #ffffff - text on secondary */
+  --muted: oklch(0.97 0 0); /* #f1f5f9 - muted elements */
+  --muted-foreground: oklch(0.556 0 0); /* #475569 - muted text */
+  --accent: oklch(0.696 0.17 162.48); /* #10b981 - emerald accent */
+  --accent-foreground: oklch(1 0 0); /* #ffffff - text on accent */
+  --destructive: oklch(0.577 0.245 27.325); /* #dc2626 - red for destructive actions */
+  --destructive-foreground: oklch(1 0 0); /* #ffffff - text on destructive */
+  --border: oklch(0.922 0 0); /* #d1d5db - light border */
+  --input: oklch(0.97 0 0); /* #f1f5f9 - input background */
+  --ring: oklch(0.646 0.222 285.8 / 0.5); /* primary color with opacity for focus */
+  --chart-1: oklch(0.696 0.17 162.48); /* #10b981 - emerald */
+  --chart-2: oklch(0.627 0.265 303.9); /* #ec4899 - pink */
+  --chart-3: oklch(0.769 0.188 70.08); /* #d97706 - orange */
+  --chart-4: oklch(0.646 0.222 285.8); /* #059669 - emerald primary */
+  --chart-5: oklch(0.577 0.245 27.325); /* #be123c - red */
+  --radius: 0.5rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.205 0 0);
+  --sidebar-primary: oklch(0.97 0 0);
+  --sidebar-primary-foreground: oklch(0.205 0 0);
+  --sidebar-accent: oklch(0.696 0.17 162.48);
+  --sidebar-accent-foreground: oklch(1 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.646 0.222 285.8 / 0.5);
+  --font-inter: "Inter", sans-serif;
+  --font-manrope: "Manrope", serif;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.646 0.222 285.8);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.696 0.17 162.48);
+  --chart-2: oklch(0.627 0.265 303.9);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.646 0.222 285.8);
+  --chart-5: oklch(0.577 0.245 27.325);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-manrope);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Adding stunning image slider animations and styles */
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  15% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  85% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+}
+
+@keyframes continuousSlide {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  5% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  95% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+/* Creating truly seamless sliding animation with no gaps */
+@keyframes seamlessFlow {
+  0% {
+    transform: translateX(100%);
+  }
+  11.11% {
+    transform: translateX(0%);
+  }
+  22.22% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  height: 80vh;
+  min-height: 600px;
+  /* Ensure no background shows through */
+  background: #000;
+}
+
+.slide-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* Adding subtle opacity reduction to make images slightly fainter */
+  opacity: 0.92;
+  animation: seamlessFlow 36s infinite linear;
+  z-index: 1;
+  /* Ensure first image is visible immediately */
+  transform: translateX(100%);
+}
+
+/* Adjust positioning for Taj Mahal image to show full head */
+.slide-image[style*="obr-india.png"] {
+  background-position: center 20%;
+}
+
+/* Modified timing - first image starts immediately visible, others follow */
+.slide-image:nth-child(1) {
+  animation-delay: 0s;
+  /* Make first image immediately visible */
+  transform: translateX(0%);
+}
+.slide-image:nth-child(2) {
+  animation-delay: 4s;
+}
+.slide-image:nth-child(3) {
+  animation-delay: 8s;
+}
+.slide-image:nth-child(4) {
+  animation-delay: 12s;
+}
+.slide-image:nth-child(5) {
+  animation-delay: 16s;
+}
+.slide-image:nth-child(6) {
+  animation-delay: 20s;
+}
+.slide-image:nth-child(7) {
+  animation-delay: 24s;
+}
+.slide-image:nth-child(8) {
+  animation-delay: 28s;
+}
+.slide-image:nth-child(9) {
+  animation-delay: 32s;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  animation: fadeInOut 36s infinite;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.slide-caption:nth-child(2) {
+  animation-delay: 0s;
+}
+.slide-caption:nth-child(4) {
+  animation-delay: 4s;
+}
+.slide-caption:nth-child(6) {
+  animation-delay: 8s;
+}
+.slide-caption:nth-child(8) {
+  animation-delay: 12s;
+}
+.slide-caption:nth-child(10) {
+  animation-delay: 16s;
+}
+.slide-caption:nth-child(12) {
+  animation-delay: 20s;
+}
+.slide-caption:nth-child(14) {
+  animation-delay: 24s;
+}
+.slide-caption:nth-child(16) {
+  animation-delay: 28s;
+}
+.slide-caption:nth-child(18) {
+  animation-delay: 32s;
+}
+
+.navigation-dots {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 20;
+}
+
+.nav-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: dotPulse 36s infinite;
+}
+
+.nav-dot:hover {
+  background: rgba(99, 102, 241, 0.8);
+  border-color: rgba(99, 102, 241, 1);
+  transform: scale(1.2);
+}
+
+@keyframes dotPulse {
+  0%,
+  88.9%,
+  100% {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+  }
+  11.1% {
+    background: rgba(99, 102, 241, 0.9);
+    border-color: rgba(99, 102, 241, 1);
+    transform: scale(1.3);
+  }
+}
+
+.nav-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.nav-dot:nth-child(2) {
+  animation-delay: 4s;
+}
+.nav-dot:nth-child(3) {
+  animation-delay: 8s;
+}
+.nav-dot:nth-child(4) {
+  animation-delay: 12s;
+}
+.nav-dot:nth-child(5) {
+  animation-delay: 16s;
+}
+.nav-dot:nth-child(6) {
+  animation-delay: 20s;
+}
+.nav-dot:nth-child(7) {
+  animation-delay: 24s;
+}
+.nav-dot:nth-child(8) {
+  animation-delay: 28s;
+}
+.nav-dot:nth-child(9) {
+  animation-delay: 32s;
+}
