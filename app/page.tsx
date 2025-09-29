@@ -153,8 +153,8 @@ export default function HomePage() {
               {/* CHANGE: Increased mobile top margin from mt-4 to mt-6 to move title slightly down */}
               {/* CHANGE: Updated hero title text to match user's exact request */}
               <h1 className="text-3xl sm:text-3xl lg:text-6xl font-black mb-2 sm:mb-8 font-sans leading-tight tracking-tight text-white drop-shadow-2xl mt-6 sm:mt-0">
-                <span className="block sm:inline">The Secret to Building the World's</span>
-                <span className="block sm:inline"> Most Valuable Company</span>
+                <span className="block">The Secret to Building the World's</span>
+                <span className="block">Most Valuable Company</span>
               </h1>
 
               {/* CHANGE: Reduced subtitle size on mobile */}
