@@ -145,8 +145,8 @@ export default function HomePage() {
           <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
             <div className="text-white space-y-2 sm:space-y-8 text-center">
               {/* CHANGE: Reduced text size on mobile */}
-              {/* CHANGE: Reduced mobile bottom margin from mb-2 to mb-1 to bring text closer together */}
-              <p className="text-sm sm:text-base lg:text-xl font-semibold text-cyan-300 tracking-widest uppercase mb-1 sm:mb-4">
+              {/* CHANGE: Completely removed mobile bottom margin from mb-1 to mb-0 to bring text elements closer together */}
+              <p className="text-sm sm:text-base lg:text-xl font-semibold text-cyan-300 tracking-widest uppercase mb-0 sm:mb-4">
                 INSIGHT FROM SILICON VALLEY
               </p>
 
