@@ -30,7 +30,8 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:flex items-center">
-              <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white px-6 text-xl mr-4">
+              {/* CHANGE: Reduced right margin from mr-4 to mr-2 to move About Us closer to Contact */}
+              <Button variant="ghost" className="text-white hover:bg-white/10 hover:text-white px-6 text-xl mr-2">
                 About Us
               </Button>
               {/* CHANGE: Removed right margin from Contact button to bring it directly next to social icons */}
@@ -137,7 +138,7 @@ export default function HomePage() {
           Your browser does not support the video tag.
         </video>
 
-        <div className="absolute inset-0 bg-black/25 z-10"></div>
+        <div className="absolute inset-0 bg-black/30 z-10"></div>
 
         <div className="absolute inset-0 z-30 flex items-end justify-center pt-8 sm:pt-0 pb-8 sm:pb-32">
           {/* CHANGE: Reduced horizontal padding for mobile */}
