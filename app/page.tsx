@@ -21,7 +21,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-background">
-      <nav className="fixed top-0 left-0 right-0 z-[999999] bg-black backdrop-blur-xl border-b border-white/20 will-change-auto shadow-2xl">
+      <nav className="fixed top-0 left-0 right-0 z-[999999] bg-black/70 backdrop-blur-xl border-b border-white/20 will-change-auto shadow-2xl">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 sm:gap-4">
@@ -134,11 +134,9 @@ export default function HomePage() {
           Your browser does not support the video tag.
         </video>
 
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-black/50 z-10"></div>
+        <div className="absolute inset-0 bg-black/10 z-10"></div>
 
-        {/* Hero Content Overlay */}
-        <div className="absolute inset-0 z-30 flex items-end justify-center pt-8 sm:pt-0 pb-8 sm:pb-32 bg-slate-900/20">
+        <div className="absolute inset-0 z-30 flex items-end justify-center pt-8 sm:pt-0 pb-8 sm:pb-32">
           {/* CHANGE: Reduced horizontal padding for mobile */}
           <div className="max-w-6xl mx-auto px-2 sm:px-4 lg:px-6">
             <div className="text-white space-y-2 sm:space-y-8 text-center">
