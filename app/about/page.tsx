@@ -448,15 +448,22 @@ export default function AboutPage() {
       {/* Norway Heritage Section */}
       <section className="relative overflow-hidden">
         {/* Full-width Image with Heading Overlay */}
-        <div className="relative h-[70vh] min-h-[500px]">
+        <div className="relative h-[40vh] lg:h-[70vh] min-h-[300px] lg:min-h-[500px]">
+          {/* Mobile Image */}
+          <img
+            src="/norway-mountains-mobile.jpg"
+            alt="Norway's West Coast Mountains"
+            className="lg:hidden w-full h-full object-cover object-[70%_center]"
+          />
+          {/* Desktop Image */}
           <img
             src="/norway-mountains-updated.jpg"
             alt="Norway's West Coast Mountains"
-            className="w-full h-full object-cover"
+            className="hidden lg:block w-full h-full object-cover"
           />
           <div className="absolute bottom-0 left-0 right-0 p-8 sm:p-12 lg:p-16">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight text-balance">
+              <h2 className="text-xl sm:text-2xl lg:text-4xl font-black text-white leading-tight text-balance">
                 Ole Bent grew up among the mountains of Norway's wild and beautiful West Coast.
               </h2>
             </div>
