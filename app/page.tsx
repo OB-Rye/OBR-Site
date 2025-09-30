@@ -31,18 +31,20 @@ export default function HomePage() {
 
             <div className="ml-auto hidden lg:flex lg:items-center lg:gap-6">
               {/* CHANGE: Wrapped About Us button with link to /about page */}
+              {/* CHANGE: Added lg:px-0 to About Us button for desktop */}
               <a href="/about">
                 <Button
                   variant="ghost"
-                  className="text-white hover:bg-white/10 hover:text-white px-6 text-xl lg:mx-0 lg:mr-0 lg:ml-0"
+                  className="text-white hover:bg-white/10 hover:text-white px-6 text-xl lg:mx-0 lg:mr-0 lg:ml-0 lg:px-0"
                 >
                   About Us
                 </Button>
               </a>
+              {/* CHANGE: Added lg:px-0 to Contact button for desktop */}
               <a href="/contact">
                 <Button
                   variant="ghost"
-                  className="text-white hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 px-6 text-xl lg:mx-0 lg:mr-0 lg:ml-0"
+                  className="text-white hover:bg-white/20 hover:text-white hover:scale-105 transition-all duration-200 px-6 text-xl lg:mx-0 lg:mr-0 lg:ml-0 lg:px-0"
                 >
                   Contact
                 </Button>
