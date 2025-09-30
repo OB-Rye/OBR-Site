@@ -1226,7 +1226,7 @@ export default function HomePage() {
                 </div>
 
                 <a href="/contact">
-                  <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 text-lg font-semibold">
+                  <Button className="w-full bg-blue-500 hover:bg-blue-600 hover:scale-105 hover:shadow-xl transition-all duration-300 text-white py-3 text-lg font-semibold">
                     Start Transformation
                   </Button>
                 </a>
@@ -1278,7 +1278,7 @@ export default function HomePage() {
                 </div>
 
                 <a href="/contact">
-                  <Button className="w-full bg-purple-500 hover:bg-purple-600 text-white py-3 text-lg font-semibold">
+                  <Button className="w-full bg-purple-500 hover:bg-purple-600 hover:scale-105 hover:shadow-xl transition-all duration-300 text-white py-3 text-lg font-semibold">
                     Transform Your Team
                   </Button>
                 </a>
@@ -1330,7 +1330,7 @@ export default function HomePage() {
                 </div>
 
                 <a href="/contact">
-                  <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-3 text-lg font-semibold">
+                  <Button className="w-full bg-green-500 hover:bg-green-600 hover:scale-105 hover:shadow-xl transition-all duration-300 text-white py-3 text-lg font-semibold">
                     Plan Your Expansion
                   </Button>
                 </a>
