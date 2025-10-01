@@ -228,9 +228,13 @@ export default function HomePage() {
               {/* CHANGE: Increased mobile font size from text-base to text-lg for subtitle */}
               <p className="text-lg sm:text-xl lg:text-2xl font-bold leading-tight mb-12 text-slate-800 drop-shadow-lg tracking-tight">
                 <span className="text-slate-600">
-                  <span className="block text-2xl sm:text-xl lg:text-[28px]">Mastering Cultural Dynamics</span>
-                  <span className="block text-xl sm:text-xl lg:text-2xl">–from Europe and Asia to the USA,</span>
-                  <span className="block text-xl sm:text-xl lg:text-2xl">Silicon Valley and the age of AI.</span>
+                  <div className="inline-block bg-gradient-to-br from-white/90 via-blue-50/80 to-purple-50/70 backdrop-blur-sm rounded-3xl px-8 py-6 shadow-2xl border-2 border-white/60 hover:shadow-3xl transition-all duration-300">
+                    <div className="font-serif">
+                      <span className="block text-2xl sm:text-xl lg:text-[28px]">Mastering Cultural Dynamics</span>
+                      <span className="block text-xl sm:text-xl lg:text-2xl">–from Europe and Asia to the USA,</span>
+                      <span className="block text-xl sm:text-xl lg:text-2xl">Silicon Valley and the age of AI.</span>
+                    </div>
+                  </div>
                 </span>
               </p>
 
