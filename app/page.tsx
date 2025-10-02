@@ -520,21 +520,21 @@ export default function HomePage() {
                     <h4 className="text-xl sm:text-2xl font-bold mb-6 bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent font-serif">
                       Ole Bent's Cultural Framework
                     </h4>
-                    <div className="flex flex-wrap gap-4 justify-center">
+                    <div className="flex flex-wrap gap-4 mt-6">
                       {/* Open in new tab */}
                       <a
-                        href="/files/ole-bents-cultural-framework.pdf"
+                        href="/files/Ole-Bents-Cultural-Framework.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-blue-600 px-6 py-3 text-white font-semibold shadow hover:opacity-90 transition"
+                        className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-green-600 to-blue-600 px-6 py-3 text-white font-semibold shadow hover:opacity-90 transition"
                       >
                         View Online →
                       </a>
                       {/* Download directly */}
                       <a
-                        href="/files/ole-bents-cultural-framework.pdf"
+                        href="/files/Ole-Bents-Cultural-Framework.pdf"
                         download="Ole-Bents-Cultural-Framework.pdf"
-                        className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-emerald-600 to-blue-600 px-6 py-3 text-white font-semibold shadow hover:opacity-90 transition"
+                        className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-green-600 to-blue-600 px-6 py-3 text-white font-semibold shadow hover:opacity-90 transition"
                       >
                         Download PDF ⬇
                       </a>
