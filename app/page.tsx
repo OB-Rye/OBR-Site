@@ -858,7 +858,7 @@ export default function HomePage() {
                     <span className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0">✓</span>
                     {/* Reduced text size on mobile from text-slate-700 to text-slate-600 */}
                     <span className="text-slate-600">
-                      Covers 8 key cultural topics, providing a 360-degree approach to mastering cultural dynamics.
+                      Covers 10 key cultural topics, providing a 360-degree approach to mastering cultural dynamics.
                     </span>
                   </div>
                   <div className="flex items-start gap-3">
