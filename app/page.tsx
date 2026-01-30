@@ -142,7 +142,7 @@ export default function HomePage() {
         {/* CHANGE: Added proper height and z-index to video */}
         <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover z-0">
           <source
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/banner%20v2%20copy-1438R1U7kqLh5wXgir6vkZ4hWiOFtV.mov"
+            src="/images/banner-20v2-20copy.mov"
             type="video/mp4"
           />
           Your browser does not support the video tag.
@@ -845,11 +845,12 @@ export default function HomePage() {
                 <div className="mb-4">
                   <Badge className="bg-red-100 text-red-700 border-red-200 mb-4">Most Popular</Badge>
                 </div>
-                {/* Reduced heading size on mobile from text-2xl to text-lg */}
-                <h3 className="text-lg sm:text-2xl font-bold mb-2">
-                  <span className="text-red-600">1-Day Deep Dive:</span>{" "}
-                  <span className="text-slate-900">Lead Across Cultures with Confidence</span>
-                </h3>
+{/* Reduced heading size on mobile from text-2xl to text-lg */}
+  <h3 className="text-lg sm:text-2xl font-bold mb-2">
+    <span className="bg-gradient-to-r from-red-600 via-orange-500 to-amber-500 bg-clip-text text-transparent font-extrabold">MasterClass</span>
+    <span className="text-slate-600 font-medium text-base sm:text-lg"> (In-House, Full-Day)</span>
+    <span className="block mt-1 text-slate-800 font-semibold">Cultural Intelligence for Global Leaders</span>
+  </h3>
                 <p className="text-base text-slate-600 italic mb-6">Comprehensive Mastery & Practical Application</p>
 
                 <div className="space-y-4 mb-8">
